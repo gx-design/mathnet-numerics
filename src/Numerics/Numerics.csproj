@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Library</OutputType>
-    <TargetFrameworks>net40;net461;netstandard1.3;netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <AssemblyName>MathNet.Numerics</AssemblyName>
     <RootNamespace>MathNet.Numerics</RootNamespace>
     <IsPackable>true</IsPackable>
@@ -25,11 +25,4 @@
     <NoWarn>1701;1702;1705;1591;1573</NoWarn>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
-  <ItemGroup Condition="'$(TargetFramework)' == 'net40'">
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Numerics" />
-    <Reference Include="System.Runtime.Serialization" />
-  </ItemGroup>
-  <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>
