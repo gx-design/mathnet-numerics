@@ -125,19 +125,16 @@ namespace MathNet.Numerics.Providers.LinearAlgebra
             return TryUse(CreateNativeMKL(consistency, precision, accuracy));
         }
 
-        public static ILinearAlgebraProvider CreateNativeCUDA()
-        {
-            return new Cuda.CudaLinearAlgebraProvider(GetCombinedHintPath());
-        }
-
         public static void UseNativeCUDA()
         {
-            Provider = CreateNativeCUDA();
+            //Provider = CreateNativeCUDA();
         }
 
         public static bool TryUseNativeCUDA()
         {
-            return TryUse(CreateNativeCUDA());
+            //return TryUse(CreateNativeCUDA());
+
+            return false;
         }
 
         public static ILinearAlgebraProvider CreateNativeOpenBLAS()

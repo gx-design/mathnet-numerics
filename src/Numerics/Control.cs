@@ -110,20 +110,6 @@ namespace MathNet.Numerics
         }
 
         /// <summary>
-        /// Use the Intel MKL native provider for linear algebra, with the specified configuration parameters.
-        /// Throws if it is not available or failed to initialize, in which case the previous provider is still active.
-        /// </summary>
-        [CLSCompliant(false)]
-        public static void UseNativeMKL(
-            Providers.Common.Mkl.MklConsistency consistency = Providers.Common.Mkl.MklConsistency.Auto,
-            Providers.Common.Mkl.MklPrecision precision = Providers.Common.Mkl.MklPrecision.Double,
-            Providers.Common.Mkl.MklAccuracy accuracy = Providers.Common.Mkl.MklAccuracy.High)
-        {
-            LinearAlgebraControl.UseNativeMKL(consistency, precision, accuracy);
-            FourierTransformControl.UseNativeMKL();
-        }
-
-        /// <summary>
         /// Try to use the Intel MKL native provider for linear algebra.
         /// </summary>
         /// <returns>

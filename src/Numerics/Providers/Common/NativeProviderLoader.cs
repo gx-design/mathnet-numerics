@@ -247,8 +247,11 @@ namespace MathNet.Numerics.Providers.Common
 
             const int RTLD_NOW = 2;
 
-            [DllImport("libdl.so", SetLastError = true)]
-            static extern IntPtr dlopen(String fileName, int flags);
+            //[DllImport("libdl.so", SetLastError = true)]
+            static IntPtr dlopen(String fileName, int flags)
+            {
+                return IntPtr.Zero;
+            }
         }
     }
 }
